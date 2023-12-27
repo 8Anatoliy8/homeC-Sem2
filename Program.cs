@@ -47,11 +47,11 @@ if (number >= 10 && number <= 99)
     int thirdNumber = number % 10;
     if (secondNumber > thirdNumber)
     {
-        Console.WriteLine($"Наибольшее цифра числа {number} является {secondNumber}");
+        Console.WriteLine($"Наибольшая цифра числа {number} является {secondNumber}");
     }
     else
     {
-        Console.WriteLine($"Наибольшее цифра числа {number} является {thirdNumber}");
+        Console.WriteLine($"Наибольшая цифра числа {number} является {thirdNumber}");
     }
 }
 else
