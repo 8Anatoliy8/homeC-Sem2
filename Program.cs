@@ -35,3 +35,26 @@
 // {
 //     Console.WriteLine($"Точка находится в IV координатной четверти");
 // }
+
+// Задача 3: Напишите программу, которая принимает на вход целое число из отрезка [10, 99] 
+// и показывает наибольшую цифру числа.
+
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number >= 10 && number <= 99)
+{
+    int secondNumber = number / 10;
+    int thirdNumber = number % 10;
+    if (secondNumber > thirdNumber)
+    {
+        Console.WriteLine($"Наибольшее цифра числа {number} является {secondNumber}");
+    }
+    else
+    {
+        Console.WriteLine($"Наибольшее цифра числа {number} является {thirdNumber}");
+    }
+}
+else
+{
+    Console.WriteLine("Число не двухзначное или отрицательное");
+}
