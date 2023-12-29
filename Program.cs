@@ -36,25 +36,55 @@
 //     Console.WriteLine($"Точка находится в IV координатной четверти");
 // }
 
-// Задача 3: Напишите программу, которая принимает на вход целое число из отрезка [10, 99] 
-// и показывает наибольшую цифру числа.
+// // Задача 3: Напишите программу, которая принимает на вход целое число из отрезка [10, 99] 
+// // и показывает наибольшую цифру числа.
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// if (number >= 10 && number <= 99)
+// {
+//     int secondNumber = number / 10;
+//     int thirdNumber = number % 10;
+//     if (secondNumber > thirdNumber)
+//     {
+//         Console.WriteLine($"Наибольшая цифра числа {number} является {secondNumber}");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Наибольшая цифра числа {number} является {thirdNumber}");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Число не двухзначное или отрицательное");
+// }
+
+
+// Задача 4: Напишите программу, которая на вход принимает натуральное число N, а на выходе показывает его цифры через запятую.
 
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 10 && number <= 99)
+int N = Convert.ToInt32(Console.ReadLine());
+if (N<0)
 {
-    int secondNumber = number / 10;
-    int thirdNumber = number % 10;
-    if (secondNumber > thirdNumber)
-    {
-        Console.WriteLine($"Наибольшая цифра числа {number} является {secondNumber}");
-    }
-    else
-    {
-        Console.WriteLine($"Наибольшая цифра числа {number} является {thirdNumber}");
-    }
+    Console.WriteLine("Вы ввели отрицательное число");
+}
+if (N<10)
+{
+    Console.WriteLine(N);
 }
 else
 {
-    Console.WriteLine("Число не двухзначное или отрицательное");
+    while (N>0)
+    {
+        int number = N%10;
+        N/=10;
+            if (N>0)
+            {
+            Console.Write(number + ", ");
+            }
+            else
+            {
+             Console.Write(number);
+            }
+    }
 }
